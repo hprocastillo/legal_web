@@ -44,29 +44,51 @@
             <p class="text-center mb-4">Completa tus datos y uno de nuestros asesores se pondrá en contacto.</p>
 
             <!-- CONTACT FORM -->
-            <form>
+            <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
               <!-- FULL NAME -->
               <div class="mb-4">
                 <label for="fullNameInput" class="form-label small">Nombres y apellidos*</label>
-                <input type="text" class="form-control border-primary-subtle" id="fullNameInput">
+                <input
+                  type="text"
+                  class="form-control border-primary-subtle"
+                  id="fullNameInput"
+                  formControlName="fullName"
+                  required
+                >
               </div>
 
               <!-- EMAIL -->
               <div class="mb-4">
                 <label for="emailInput" class="form-label small">Correo electrónico*</label>
-                <input type="email" class="form-control border-primary-subtle" id="emailInput">
+                <input
+                  type="email"
+                  class="form-control border-primary-subtle"
+                  id="emailInput"
+                  formControlName="email"
+                  required>
               </div>
 
               <!-- PHONE -->
               <div class="mb-4">
                 <label for="phoneInput" class="form-label small">Teléfono*</label>
-                <input type="tel" class="form-control border-primary-subtle" id="phoneInput">
+                <input
+                  type="tel"
+                  class="form-control border-primary-subtle"
+                  id="phoneInput"
+                  formControlName="phone"
+                  required>
               </div>
 
               <!-- MESSAGE -->
               <div class="mb-4">
                 <label for="messageInput" class="form-label small">Escríbenos tu Consulta*</label>
-                <textarea class="form-control border-primary-subtle" id="messageInput" rows="4"></textarea>
+                <textarea
+                  class="form-control border-primary-subtle"
+                  id="messageInput"
+                  rows="4"
+                  formControlName="message"
+                  required></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary w-100">

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "legal--project": {
+      "hosting": {
+        "legalWeb": [
+          "legal--project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "legal--project"
+  }
+}
